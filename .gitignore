@@ -1,2 +1,4 @@
-node_modules
+node_modulesgit rm -rf --cached .
+git add .
+
 .env
