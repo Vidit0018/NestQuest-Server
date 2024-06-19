@@ -15,7 +15,11 @@
         type:String,
         required:true,
         unique: true
-    }
+    },
+    avatar:{
+        type:String,
+        default: "https://cdn-icons-png.freepik.com/512/6596/6596121.png"
+    },
  },{timestamps:true});
 
  const User = mongoose.model('User',userSchema);
