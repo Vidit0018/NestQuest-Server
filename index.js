@@ -24,7 +24,9 @@ app.use(cookieParser());
 app.listen(3000, ()=>{
     console.log('Server is running on port 3000'); 
 })
-
+app.get('/' ,(req,res) =>{
+    res.status(200).json("api connected")
+})
 app.use('/api/user',UserRouter); 
 app.use('/api/auth',AuthRouter); 
 app.use('/api/listing',listingRouter); 
