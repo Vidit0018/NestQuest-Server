@@ -23,8 +23,8 @@ app.use(cookieParser());
 app.use(cors({
     origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: '*',
-    exposedHeaders: '*',
+    allowedHeaders: ['Content-Type', 'Authorization', 'Set-Cookie', 'X-Custom-Header'], // Include all headers you want to allow
+    exposedHeaders: ['Content-Type', 'Authorization', 'Set-Cookie', 'X-Custom-Header'], // Expose all allowed headers to client
     credentials: true
   }));
   
