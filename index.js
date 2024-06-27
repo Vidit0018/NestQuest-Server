@@ -20,11 +20,12 @@ mongoose
 const app = express() ;
 app.use(express.json());
 app.use(cookieParser());
+
 app.use(cors({
-    origin: '*',
+    origin: 'http://localhost:5173',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'Set-Cookie', 'X-Custom-Header'], // Include all headers you want to allow
-    exposedHeaders: ['Content-Type', 'Authorization', 'Set-Cookie', 'X-Custom-Header'], // Expose all allowed headers to client
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    exposedHeaders: ['Content-Length', 'Access-Control-Allow-Origin', 'Access-Control-Allow-Headers', 'Access-Control-Allow-Methods', 'Access-Control-Expose-Headers', 'Set-Cookie'],
     credentials: true
   }));
   
